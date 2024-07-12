@@ -11,10 +11,6 @@ export function ExpenseItem({
   amount: number;
   date: Date;
 }) {
-  const clickHandler = () => {
-    //
-  };
-
   return (
     <Card className="expense-item">
       <ExpenseDate date={date} />
@@ -22,7 +18,7 @@ export function ExpenseItem({
         <h2>{title}</h2>
         <div className="expense-item__price">{`$${amount}`}</div>
       </div>
-      <button onClick={clickHandler}>Change Title</button>
+      <button>Change Title</button>
     </Card>
   );
 }
