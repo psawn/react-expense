@@ -1,3 +1,4 @@
+import { Card } from "../UI/Card";
 import { ExpenseDate } from "./ExpenseDate";
 import "./ExpenseItem.css";
 
@@ -10,13 +11,18 @@ export function ExpenseItem({
   amount: number;
   date: Date;
 }) {
+  const clickHandler = () => {
+    //
+  };
+
   return (
-    <div className="expense-item">
+    <Card className="expense-item">
       <ExpenseDate date={date} />
       <div className="expense-item__description">
         <h2>{title}</h2>
         <div className="expense-item__price">{`$${amount}`}</div>
       </div>
-    </div>
+      <button onClick={clickHandler}>Change Title</button>
+    </Card>
   );
 }
