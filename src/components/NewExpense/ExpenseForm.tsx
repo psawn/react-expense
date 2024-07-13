@@ -6,7 +6,7 @@ export function ExpenseForm({
 }: {
   onSaveExpenseData: (enteredExpenseData: {
     title: string;
-    amount: string;
+    amount: number;
     date: Date;
   }) => void;
 }) {
@@ -40,7 +40,7 @@ export function ExpenseForm({
 
     const expenseData = {
       title: userInput.enteredTitle,
-      amount: userInput.enteredAmount,
+      amount: +userInput.enteredAmount,
       date: new Date(userInput.enteredDate),
     };
 

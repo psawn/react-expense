@@ -7,13 +7,13 @@ export function NewExpense({
   onAddExpense: (expense: {
     id: string;
     title: string;
-    amount: string;
+    amount: number;
     date: Date;
   }) => void;
 }) {
   const saveExpenseDataHandler = (enteredExpenseData: {
     title: string;
-    amount: string;
+    amount: number;
     date: Date;
   }) => {
     const expenseData = {
